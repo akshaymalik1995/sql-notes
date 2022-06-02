@@ -52,10 +52,32 @@
 
 -- TODO: AVERAGE NUMBER OF COURSES IN MONTH
 
-SELECT SUM(course_count) AS 'course_total_count', signup_month
-FROM students
-GROUP BY signup_month
-ORDER BY course_total_count DESC
+-- SELECT SUM(course_count) AS 'course_total_count', signup_month
+-- FROM students
+-- GROUP BY signup_month
+-- ORDER BY course_total_count DESC
+
+-- --------------------------------------------------------------
+-- TODO: GET ME EMAILS OF USERS SIGNED UP BETWEEN JANUARY AND APRIL
+-- RANGE: BETWEEN AND
+
+-- SELECT email, signup_month
+-- FROM students
+-- WHERE signup_month BETWEEN 1 AND 4;
+
+-- ---------------------------------------------------------------
+
+-- TODO: CASE THEN: MULTIPLE RANGES
+
+-- SELECT course_count AS 'course_count', login_count, 
+--     CASE
+--         WHEN login_count BETWEEN 1 AND 30 THEN 'NEW USER'
+--         WHEN login_count BETWEEN 31 AND 60 THEN 'FREQUENT USER'
+--         WHEN login_count > 60 THEN 'ACTIVE USER'
+--     ELSE '##'
+--     END
+--     AS 'user_cat'
+-- FROM students
 
 
 
